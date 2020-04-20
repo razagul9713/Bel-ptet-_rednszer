@@ -6,7 +6,7 @@ Az a tervem, hogy egy olyan megbízható beléptető rendszert készítsek amive
 
 Nem az a célom, hogy ez legyen a legnépszerűbb rendszer, csak szeretném, hogy az emberek számára több lehetőség is adódjon, hogy ne csak egy biztonsági szoftvert tudjanak alkalmazni. Tegyük fel, hogy egy új iskola épül, ahol szeretnének egy egyszerű, de mégis biztonságos securty system-et bevezetni, de nem szeretnének nagyon drágán vásárolni ilyen terméket.
 
-##**Működése**
+## **Működése**
 
 Maga a rendszer beléptető kártyákkal működne. A kártyára felinportálva a szükséges adatokat, amit egy adatbázisban tárolunk, tudnának a diákok és a tanárok közlekedni az épületben. A bejáratnál lenne egy kártya beolvasó, ami össze egyezteti a kártyán lévő adatokat, az adatbázisban lévő adatokkal, és ha talál olyan nevű hallgatót, vagy oktatót a rendszerben, akkor beléphet az épületbe. Kis kiegészítésként még egy kijelzőn láthatunk egy fotót illetve az adott ember nevét, aki belép az épületbe.
 
