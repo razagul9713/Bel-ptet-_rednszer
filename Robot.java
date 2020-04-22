@@ -70,7 +70,7 @@ class SzereloRobot extends Textúra{
 	@Override
 	public String kiir(){return "SzerelőRobot";}
 }
-abstract class Ötvözet extends Robot{
+abstract class Ötvözet extends Textúra{
 	protected Robot robot;
 	public Ötvözet(Robot robot){this.robot = robot;}
 	public String kiir()
