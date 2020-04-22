@@ -1,18 +1,16 @@
-# SecuritySystem 
+# RobotGyartas
 
-## **Terv**
+## **Elképzelés**
+A mai világban mára már a technikai fejlődés oda jutott, hogy az emberi munkát akár gépekkel helyettesítsék. Ezért is gondoltam, hogy egy kis projektet készítek, ami azt mutatja be, hogy hogyan is épülne fel egy Robot gyártás, ami emberi munkaerőre lenne képes.
 
-Az a tervem, hogy egy olyan megbízható beléptető rendszert készítsek amivel könnyedén belehet azonosítani egy cégnél, hogy az adott ember, aki épp belép az épületbe, az ott dolgozik-e vagy sem. A célom az, hogy maga a szoftver egyszerű és könnyedén értelmezhető legyen bárki számára, illetve hogy minél biztonságosabb legyen
-
-Nem az a célom, hogy ez legyen a legnépszerűbb rendszer, csak szeretném, hogy az emberek számára több lehetőség is adódjon, hogy ne csak egy biztonsági szoftvert tudjanak alkalmazni. Tegyük fel, hogy egy új iskola épül, ahol szeretnének egy egyszerű, de mégis biztonságos securty system-et bevezetni, de nem szeretnének nagyon drágán vásárolni ilyen terméket.
 
 ## **Működése**
 
-Maga a rendszer beléptető kártyákkal működne. A kártyára felinportálva a szükséges adatokat, amit egy adatbázisban tárolunk, tudnának a diákok és a tanárok közlekedni az épületben. A bejáratnál lenne egy kártya beolvasó, ami össze egyezteti a kártyán lévő adatokat, az adatbázisban lévő adatokkal, és ha talál olyan nevű hallgatót, vagy oktatót a rendszerben, akkor beléphet az épületbe. Kis kiegészítésként még egy kijelzőn láthatunk egy fotót illetve az adott ember nevét, aki belép az épületbe.
+Mivel ez az egész projekt eléggé összetett, ezért én csak pár részletét szeretném egy kicsit megvalósítani ennek a tervnek. Lesz egy osztályom, ami a Robotokat fogja kezelni, és lesz egy, ami az embereket. Mivel munkaerő helyettesítésről van szó, ezért szükség van egy olyan osztályra, ami az embert és a Robotot összegyúrja. Ehhez szükséges egy Ember Interface, amiben a szükséges emberi adatokat tárolom. Majd lesz egy Robot osztályom, amiben az ő adatait rögzítem, és természetesen szükségem lesz olyan metódusokra is, amivel a két osztályt kezelni tudom.
 
-Ez az egész rendszer az adott épület hálozatán működne, de természetesen dinamikusan változó ez a szoftvercsomag. Lesz egy közös ősosztály amiben az embereket fogom tárolni és lesznek külön gyermek osztályok amiben a hallgatókat és az oktatókat fogom feljegyezni.
-Lesznek metódusok, amik az életkort fogják kezelni, ezáltal lesz azonosítható, hogy ki diák és ki tanár. Továbbá a nemzetiséget fogom még hozzá venni az azonosításhoz, ugyanis, ha lennének külföldi hallgatók, az ő esetüknél még ezt is figyelembe kell venni.
+Továbbá szükséges egy abstarct osztály amiben a Robot külső textúráját tárolom, ugyanis, nem mindegy, hogy egy szalagrobotról lesz szó, vagy éppenséggel, egy olyan Robotról, aki nehezebb fizikai munkát végez. Ezen túl még kell egy olyan abstarct osztály, ami a Robotnak a szívósságáért felel, azaz egy ötvözetre, hogy tartós legyen.
 
-Továbbá még a diákigazolvány számot is tárolom, amivel látható lesz a rendszerben, hogy kinek érvényes illetve kinek nem érvényes az igazolványa.  
+Majd különféle robot csoportokat hozok létre, ami a különböző területeken lesz alkalmas használni, mint például Irodai Robot, vagy egy Házi Robot.
+  
 
 
