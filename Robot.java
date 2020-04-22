@@ -79,3 +79,28 @@ abstract class Ötvözet extends Textúra{
 	}
 	public abstract String ötvözetKiir();
 }
+class GyáriTesztRobot extends Ötvözet{
+	public TesztRobot(Robot robot){super(robot);}
+	@Override
+	public String ötvözetKiir(){return "GyáriTesztRobot";}
+}
+class RendörTesztRobot extends Ötvözet{
+	public TesztRobot(Robot robot){super(robot);}
+	@Override
+	public String ötvözetKiir(){return "RendörTesztRobot";}
+}
+class HáziTesztRobot extends Ötvözet{
+	public TesztRobot(Robot robot){super(robot);}
+	@Override
+	public String ötvözetKiir(){return "HáziTesztRobot";}
+}
+class IrodaiTesztRobot extends Ötvözet{
+	public TesztRobot(Robot robot){super(robot);}
+	@Override
+	public String ötvözetKiir(){return "IrodaiTesztRobot";}
+}
+class SzereloTesztRobot extends Ötvözet{
+	public TesztRobot(Robot robot){super(robot);}
+	@Override
+	public String ötvözetKiir(){return "SzereloTesztRobot";}
+}
