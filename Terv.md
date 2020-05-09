@@ -4,8 +4,8 @@
 A mai világban mára már a technikai fejlődés oda jutott, hogy az emberi munkát akár gépekkel helyettesítsék. Ezért is gondoltam, hogy egy kis projektet készítek, ami azt mutatja be, hogy hogyan is épülne fel egy Robot gyártás, ami emberi munkaerőre lenne képes.
 
 ## **Osztályok**
-..*Abstract.
-..* Interface.
+* Abstract.
+* Interface.
 
 ## **Működése**
 
