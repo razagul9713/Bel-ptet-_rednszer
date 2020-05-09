@@ -4,8 +4,8 @@
 A mai világban mára már a technikai fejlődés oda jutott, hogy az emberi munkát akár gépekkel helyettesítsék. Ezért is gondoltam, hogy egy kis projektet készítek, ami azt mutatja be, hogy hogyan is épülne fel egy Robot gyártás, ami emberi munkaerőre lenne képes.
 
 ## **Osztályok**
-* Abstract.
-* Interface.
+* Abstract
+* Interface
 
 ## **Működése**
 
@@ -20,12 +20,12 @@ Majd különféle robot csoportokat hozok létre, ami a különböző területek
 ## **Tervezési minták és alapelvek**
 
 1. Létrehozási minta
-..* prototípus.
-..* Gyárt.
+* prototípus
+* Gyárt
 2. Szerkezeti minta
-..* díszítő.
+* díszítő
 3. Viselkedési minta
-..* Állapot.
+* Állapot
 4. GOF1, GOF2, ISP, SRP
 
 Tervezési alapelvek közül az OOP-t és azon belül a GOF1, GOF2 ISP és SRP elveket használom. Tervezési mintákon belül létrehozási tervezési mintát is használok, és azon belül a prototípus illetve gyártmetódust, a szerkezeti tervezési mintán belül a díszítőt használom és a viselkedési mintán belül az állapot mintát használom. 
