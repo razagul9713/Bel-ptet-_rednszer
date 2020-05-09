@@ -9,15 +9,18 @@ public class Robot1{
     
     public static void main(String[] args)  {
                 Robot r1 = new GyáriRobot();
-		System.out.println(r1.getElv());
+		System.out.println(r1);
 		Robot r2 = new SzereloRobot();
-		System.out.println();
+		System.out.println(r2);
 		Robot r3 = new RendörRobot();
-		System.out.println();
+		System.out.println(r3);
 		Robot r4 = new HáziRobot();
-		System.out.println();
+		System.out.println(r4);
 		Robot r5 = new IrodaiRobot();
-		System.out.println();
+		System.out.println(r5);
+	        IWorkable workable = new Robot();
+	        ISleepable sleepable = new Robot();
+	        IWorker worker = new Robot();
     }
     
 }
@@ -28,16 +31,25 @@ interface Ember{
 	int getIQ();
 	
 }
-interface Szoftver{
-	String[] stoftvers = new String[]{KUKA, Windows, Linux};
+interface ISzoftver{
+	String[] getstoftvers = new String[]{KUKA, Windows, Linux};
+}
+interface IWorkable{
+	void work();
+}
+interface ISleepable{
+	void sleep();
+}
+interface IWorker implements IWorkable, ISleepable{
+	
 }
 
 
- abstract class Robot implements Szoftver{
+ abstract class Robot implements ISzoftver, IWorker {
 	String ID;
 	int memoria;
 	String nem;
-	
+	String Szoftver;
 	int teljesitmeny;
 	String elv;
 	public Robot(String ID, int memoria, String nem, int teljesitmeny, String elv){
@@ -62,19 +74,23 @@ interface Szoftver{
 	}
 	public int getTeljesitmeny(){return teljesitmeny;}
 	public String getElv(){
-		String elv1 = "";
-		String elv2 = "";
-		String elv3 = "";
+		String elv1 = "A robot nem okozhat kárt az emberi lényben";
+		String elv2 = "A robot engedelmeskedni tartozik az ember utasításainak, kivéve ha ezek az utasítások ütköznének az első elvben leírtakkal.";
+		String elv3 = "A robot saját védelméről gondoskodik amennyiben nem ütközik az első vagy második elvben leírtakkal.";
 		if(elv1 == elv2 && elv1 == elv3 && elv2 == elv3){
 			return "Az elvek megfelelnek";
 		}
 		else return "Nem megfelelőek az elvek";
 			
 	}
-	
-
+	 public void work();
+	 public void sleep();
+	 public String[] getSzoftvers(){
+		 return Szoftver;
+	 }
+	 
     String kiir() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+	    return Robot;
     }
 }
 
@@ -96,15 +112,12 @@ class Robot_to_Ember implements Ember{
     @Override
     public String getNem() {
         return "RobotNeme: " + myRobot.getNem();
-    }
-	}
-	
-	
+    	}
+}
 
+abstract class Textúra extends Robot implements ISzoftver, IWorker{
 
-
-abstract class Textúra extends Robot{
-
+	String Szoftver;
     public Textúra(String ID, int memoria, String nem, int teljesitmeny, String elv) {
         super(ID, memoria, nem, teljesitmeny, elv);
     }
@@ -115,11 +128,17 @@ abstract class Textúra extends Robot{
 	public abstract int getTeljesitmeny();
 	public abstract String getElv();
         public abstract Robot gyariRobot();
-        
-	
+	public void work();
+	public void sleep();
+	 public String[] getSzoftvers(){
+		 return Szoftver;
+	 }	
 }
- class GyáriRobot extends Textúra{
+
+
+ class GyáriRobot extends Textúra implements ISzoftver, IWorker{
     Robot gyariRobot;
+    String Szoftver;
     public String kiir(Robot gyariRobot){return "GyáriRobot";}
     @Override
     public String getID() {
@@ -145,12 +164,18 @@ abstract class Textúra extends Robot{
     public String getElv() {
         return "Elv:" + gyariRobot.getElv();
     }
-
-    
+	 
+    public void work();
+    public void sleep();
+    public String[] getSzoftvers(){
+	 return Szoftver;
+    }  
 }
 
-class RendörRobot extends Textúra{
-    Robot rendorRobot;	
+
+class RendörRobot extends Textúra implements ISzoftver, IWorker{
+    Robot rendorRobot;
+    String Szoftver;
     @Override
     public String getID() {
        return "RendörTesztRobot ID" + rendorRobot.getID();
@@ -175,12 +200,16 @@ class RendörRobot extends Textúra{
     public String getElv() {
         return "RendörTesztRobot Elve: " + rendorRobot.getElv();
     }
-
-    
+    public void work();
+    public void sleep();
+    public String[] getSzoftvers(){
+        return Szoftver;
+    }
 }
 
-class HáziRobot extends Textúra{
+class HáziRobot extends Textúra implements ISzoftver, IWorker{
     Robot haziRobot;
+    String Szoftver;
     @Override
     public String getID() {
        return "RendörTesztRobot ID" + haziRobot.getID();
@@ -205,13 +234,17 @@ class HáziRobot extends Textúra{
     public String getElv() {
         return "RendörTesztRobot Elve: " + haziRobot.getElv();
     }
-
-    
+    public void work();
+    public void sleep();
+    public String[] getSzoftvers(){
+        return Szoftver;
+    }   
 }
 
 
-class IrodaiRobot extends Textúra{
+class IrodaiRobot extends Textúra implements ISzoftver, IWorker{
     Robot irodaiRobot;
+    String Szoftver;
     @Override
     public String getID() {
        return "RendörTesztRobot ID" + irodaiRobot.getID();
@@ -236,12 +269,16 @@ class IrodaiRobot extends Textúra{
     public String getElv() {
         return "RendörTesztRobot Elve: " + irodaiRobot.getElv();
     }
-
-   
+    public void work();
+    public void sleep();
+    public String[] getSzoftvers(){
+        return Szoftver;
+    } 
 }
 
-class SzereloRobot extends Textúra{
-    public Robot szereloRobot;
+class SzereloRobot extends Textúra implements ISzoftver, IWorker{
+    Robot szereloRobot;
+    String Szoftver;
     @Override
     public String getID() {
        return "RendörTesztRobot ID" + szereloRobot.getID();
@@ -266,11 +303,16 @@ class SzereloRobot extends Textúra{
     public String getElv() {
         return "RendörTesztRobot Elve: " + szereloRobot.getElv();
     }
-
-    
+    public void work();
+    public void sleep();
+    public String[] getSzoftvers(){
+	return Szoftver;
+    } 
 }
-abstract class Ötvözet extends Textúra{
+
+abstract class Ötvözet extends Textúra implements ISzoftver, IWorker{
 	protected Robot robot;
+	String Szoftver;
 	public Ötvözet(String ID, int memoria, String nem, int teljesitmeny, String elv) {
         super(ID, memoria, nem, teljesitmeny, elv);
         
@@ -300,12 +342,16 @@ abstract class Ötvözet extends Textúra{
 	public abstract String ötvözetGetNem();
 	public abstract int ötvözetGetTeljesitmeny();
 	public abstract String ötvözetGetElv();
-	
-        
+	public void work();
+	public void sleep();
+   	public String[] getSzoftvers(){
+	 	return Szoftver;
+    }     
 }
 
-abstract class GyáriTesztRobot extends Ötvözet{
-	public GyáriTesztRobot(Robot robot){this.robot = robot;}
+abstract class GyáriTesztRobot extends Ötvözet implements ISzoftver, IWorker{
+	Robot GyáriTesztRobot(Robot robot){this.robot = robot;}
+	String Szofver;
 	@Override
 	public String ötvözetKiir(){return "GyáriTesztRobot" + robot.kiir();}
 	@Override
@@ -318,12 +364,17 @@ abstract class GyáriTesztRobot extends Ötvözet{
 	public int ötvözetGetTeljesitmeny(){return  robot.getTeljesitmeny();}
 	@Override
 	public String ötvözetGetElv(){return "GyáriTesztRobot Elve: " + robot.getElv();}
-	
-	
+	public void work();
+	public void sleep();
+   	 public String[] getSzoftvers(){
+		 return Szoftver;
+    }
 }
-abstract class RendörTesztRobot extends Ötvözet{
+	
+abstract class RendörTesztRobot extends Ötvözet implements ISzoftver, IWorker{
     
-	public RendörTesztRobot(Robot robot){this.robot = robot;}
+	Robot RendörTesztRobot(Robot robot){this.robot = robot;}
+	String Szoftver;
 	@Override
 	public String ötvözetKiir(){return "RendörTesztRobot" + robot.kiir();}
 	@Override
@@ -336,10 +387,16 @@ abstract class RendörTesztRobot extends Ötvözet{
 	public int ötvözetGetTeljesitmeny(){return  robot.getTeljesitmeny();}
 	@Override
 	public String ötvözetGetElv(){return "RendörTesztRobot Elve: " + robot.getElv();}
-	
+	public void work();
+	public void sleep();
+    	 public String[] getSzoftvers(){
+	 	return Szoftver;
+    }	
 }
-abstract class HáziTesztRobot extends Ötvözet{
-	public HáziTesztRobot(Robot robot){this.robot = robot;}
+	
+abstract class HáziTesztRobot extends Ötvözet implements ISzoftver, IWorker{
+	Robot HáziTesztRobot(Robot robot){this.robot = robot;}
+	String Szoftver;
 	@Override
 	public String ötvözetKiir(){return "HáziTesztRobot" + robot.kiir();}
 	@Override
@@ -352,10 +409,16 @@ abstract class HáziTesztRobot extends Ötvözet{
 	public int ötvözetGetTeljesitmeny(){return  robot.getTeljesitmeny();}
 	@Override
 	public String ötvözetGetElv(){return "HáziTesztRobot Elve: " + robot.getElv();}
-	
+	public void work();
+	public void sleep();
+    	 public String[] getSzoftvers(){
+	 	return Szoftver;
+    }	
 }
-abstract class IrodaiTesztRobot extends Ötvözet{
-	public IrodaiTesztRobot(Robot robot){this.robot =robot;}
+	
+abstract class IrodaiTesztRobot extends Ötvözet implements ISzoftver, IWorker{
+	Robot IrodaiTesztRobot(Robot robot){this.robot =robot;}
+	String Szoftver;
 	@Override
 	public String ötvözetKiir(){return "IrodaiTesztRobot" + robot.kiir();}
 	@Override
@@ -368,10 +431,16 @@ abstract class IrodaiTesztRobot extends Ötvözet{
 	public int ötvözetGetTeljesitmeny(){return   robot.getTeljesitmeny();}
 	@Override
 	public String ötvözetGetElv(){return "IrodaiTesztRobot Elve: " + robot.getElv();}
-	
+	public void work();
+	public void sleep();
+   	 public String[] getSzoftvers(){
+		 return Szoftver;
+    }
 }
-abstract class SzereloTesztRobot extends Ötvözet{
-	public  SzereloTesztRobot(Robot robot){this.robot = robot;}
+	
+abstract class SzereloTesztRobot extends Ötvözet implements ISzoftver, IWorker{
+	Robot  SzereloTesztRobot(Robot robot){this.robot = robot;}
+	String Szoftver;
 	@Override
 	public String ötvözetKiir(){return "SzereloTesztRobot" + robot.kiir();}
 	@Override
@@ -384,5 +453,9 @@ abstract class SzereloTesztRobot extends Ötvözet{
 	public int ötvözetGetTeljesitmeny(){return   robot.getTeljesitmeny();}
 	@Override
 	public String ötvözetGetElv(){return "SzereloTesztRobot Elve: " + robot.getElv();}
-	
+	public void work();
+	public void sleep();
+    	 public String[] getSzoftvers(){
+		 return Szoftver;
+    }	
 }
