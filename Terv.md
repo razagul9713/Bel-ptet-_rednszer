@@ -3,7 +3,7 @@
 ## **Elképzelés**
 A mai világban mára már a technikai fejlődés oda jutott, hogy az emberi munkát akár gépekkel helyettesítsék. Ezért is gondoltam, hogy egy kis projektet készítek, ami azt mutatja be, hogy hogyan is épülne fel egy Robot gyártás, ami emberi munkaerőre lenne képes.
 
-##**Osztályok**
+## **Osztályok**
 ..* Abstract
 ..* Interface
 
@@ -13,11 +13,11 @@ Mivel ez az egész projekt eléggé összetett, ezért én csak pár részletét
 
 Továbbá szükséges egy abstarct osztály amiben a Robot külső textúráját tárolom, ugyanis, nem mindegy, hogy egy szalagrobotról lesz szó, vagy éppenséggel, egy olyan Robotról, aki nehezebb fizikai munkát végez. Ezen túl még kell egy olyan abstarct osztály, ami a Robotnak a szívósságáért felel, azaz egy ötvözetre, hogy tartós legyen.
 
-##**Felhasználási terület**
+## **Felhasználási terület**
 
 Majd különféle robot csoportokat hozok létre, ami a különböző területeken lesz alkalmas használni, mint például Irodai Robot, vagy egy Házi Robot.
 
-##**Tervezési minták és alapelvek**
+## **Tervezési minták és alapelvek**
 
 1. Létrehozási minta
 ..* prototípus
