@@ -44,6 +44,10 @@ interface IWorker extends IWorkable, ISleepable{
 
 
  abstract class Robot implements ISzoftvers, IWorker {
+
+    static Robot getstoftvers(String string) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 	String ID;
 	int memoria;
 	String nem;
@@ -131,7 +135,11 @@ abstract class Textúra extends Robot implements ISzoftvers, IWorker{
 		 return getSzoftvers();
 	 }	
 
-    private String[] getSzoftvers() {
+   public String[] getSzoftvers() {
+        return null; 
+    }
+
+    String ötvözetGetSzoftver() {
         return null;
     }
 }
@@ -175,33 +183,26 @@ abstract class Textúra extends Robot implements ISzoftvers, IWorker{
 
     @Override
     public String kiir() {
-        throw new UnsupportedOperationException("Not supported yet."); 
+        return null;
     }
 
     @Override
     public Robot gyariRobot() {
-        throw new UnsupportedOperationException("Not supported yet."); 
+        return Robot.getstoftvers("");
     }
 
     @Override
     public void getwork() {
-        throw new UnsupportedOperationException("Not supported yet."); 
+        return;
     }
 
     @Override
     public void getsleep() {
-        throw new UnsupportedOperationException("Not supported yet."); 
+        return; 
     }
 
-    private String[] getSzoftvers() {
-        throw new UnsupportedOperationException("Not supported yet."); 
-    }
+    
 }
-
- 
-
-   
-
 
 class RendörRobot extends Textúra implements ISzoftvers, IWorker{
     Robot rendorRobot;
@@ -240,26 +241,22 @@ class RendörRobot extends Textúra implements ISzoftvers, IWorker{
 
     @Override
     public String kiir() {
-        throw new UnsupportedOperationException("Not supported yet."); 
+        return null;
     }
 
     @Override
     public void getwork() {
-        throw new UnsupportedOperationException("Not supported yet."); 
+        return;
     }
 
     @Override
     public void getsleep() {
-        throw new UnsupportedOperationException("Not supported yet."); 
-    }
-
-    private String[] getSzoftvers() {
-        throw new UnsupportedOperationException("Not supported yet."); 
+        return;
     }
 
     @Override
     public Robot gyariRobot() {
-        throw new UnsupportedOperationException("Not supported yet."); 
+        return Robot.getstoftvers("");
     }
 }
 
@@ -300,27 +297,25 @@ class HáziRobot extends Textúra implements ISzoftvers, IWorker{
 
     @Override
     public String kiir() {
-        throw new UnsupportedOperationException("Not supported yet."); 
+        return null;
     }
 
     @Override
     public Robot gyariRobot() {
-        throw new UnsupportedOperationException("Not supported yet."); 
+        return Robot.getstoftvers("");
     }
 
     @Override
     public void getwork() {
-        throw new UnsupportedOperationException("Not supported yet."); 
+        return;
     }
 
     @Override
     public void getsleep() {
-        throw new UnsupportedOperationException("Not supported yet."); 
+        return;
     }
 
-    private String[] getSzoftvers() {
-        throw new UnsupportedOperationException("Not supported yet."); 
-    }
+    
 }
 
 
@@ -361,27 +356,25 @@ class IrodaiRobot extends Textúra implements ISzoftvers, IWorker{
 
     @Override
     public String kiir() {
-        throw new UnsupportedOperationException("Not supported yet."); 
+        return null;
     }
 
     @Override
     public Robot gyariRobot() {
-        throw new UnsupportedOperationException("Not supported yet."); 
+        return Robot.getstoftvers("");
     }
 
     @Override
     public void getwork() {
-        throw new UnsupportedOperationException("Not supported yet."); 
+       return;
     }
 
     @Override
     public void getsleep() {
-        throw new UnsupportedOperationException("Not supported yet."); 
+        return;
     }
 
-    private String[] getSzoftvers() {
-        throw new UnsupportedOperationException("Not supported yet."); 
-    }
+    
 }
 
 class SzereloRobot extends Textúra implements ISzoftvers, IWorker{
@@ -426,17 +419,17 @@ class SzereloRobot extends Textúra implements ISzoftvers, IWorker{
 
     @Override
     public Robot gyariRobot() {
-        throw new UnsupportedOperationException("Not supported yet."); 
+        return Robot.getstoftvers("");
     }
 
     @Override
     public void getwork() {
-        throw new UnsupportedOperationException("Not supported yet."); 
+        return;
     }
 
     @Override
     public void getsleep() {
-        throw new UnsupportedOperationException("Not supported yet."); 
+        return; 
     }
 }
 
@@ -445,9 +438,7 @@ class SzereloRobot extends Textúra implements ISzoftvers, IWorker{
 	
 	public Ötvözet(String ID, int memoria, String nem, int teljesitmeny, String elv) {
         super(ID, memoria, nem, teljesitmeny, elv);	
-    }     
-
-    
+    }        
 }
 
 abstract class GyáriTesztRobot extends Ötvözet implements ISzoftvers, IWorker{
@@ -474,9 +465,7 @@ abstract class GyáriTesztRobot extends Ötvözet implements ISzoftvers, IWorker
 	 	return getSzoftvers();
     }
 
-    private String[] getSzoftvers() {
-        throw new UnsupportedOperationException("Not supported yet."); 
-    }
+    
 }
 	
 abstract class RendörTesztRobot extends Ötvözet implements ISzoftvers, IWorker{
@@ -504,8 +493,12 @@ abstract class RendörTesztRobot extends Ötvözet implements ISzoftvers, IWorke
 	 	return getSzoftvers();
     }	
 
-    private String[] getSzoftvers() {
-        throw new UnsupportedOperationException("Not supported yet."); 
+     public String[] getSzoftvers() {
+        return null; 
+    }
+
+    String ötvözetGetSzoftver() {
+        return null;
     }
 }
 	
@@ -533,9 +526,15 @@ abstract class HáziTesztRobot extends Ötvözet implements ISzoftvers, IWorker{
 	 	return getSzoftvers();
     }	
 
-    private String[] getSzoftvers() {
-        throw new UnsupportedOperationException("Not supported yet."); 
+    public String[] getSzoftvers() {
+        return null; 
     }
+
+    String ötvözetGetSzoftver() {
+        return null;
+    }
+
+    
 }
 	
 abstract class IrodaiTesztRobot extends Ötvözet implements ISzoftvers, IWorker{
@@ -562,8 +561,11 @@ abstract class IrodaiTesztRobot extends Ötvözet implements ISzoftvers, IWorker
 	 	return getSzoftvers();
     }
 
-    private String[] getSzoftvers() {
-        throw new UnsupportedOperationException("Not supported yet."); 
+    public String[] getSzoftvers() {
+        return null; 
+    }
+    String ötvözetGetSzoftver() {
+        return null;
     }
 }
 	
@@ -591,7 +593,11 @@ abstract class SzereloTesztRobot extends Ötvözet implements ISzoftvers, IWorke
 	 	return getSzoftvers();
     }	
 
-    private String[] getSzoftvers() {
-        return getSzoftvers(); 
+      public String[] getSzoftvers() {
+        return null; 
+    }
+
+    String ötvözetGetSzoftver() {
+        return null;
     }
 }
