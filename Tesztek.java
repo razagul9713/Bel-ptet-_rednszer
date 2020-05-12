@@ -91,3 +91,41 @@ public class EmberTest {
 
    
 }
+//GyariRobotTeszt
+package robot1;
+
+/**
+ *
+ * @author Dani
+ */
+class GyáriTesztRobot {
+
+    String ötvözetKiir() {
+        return null;
+    }
+
+    String ötvözetGetID() {
+        return null;
+    }
+
+    int ötvözetGetMemoria() {
+       return 0;
+    }
+
+    String ötvözetGetNem() {
+        return null;
+    }
+
+    int ötvözetGetTeljesitmeny() {
+        return 0;
+    }
+
+    String ötvözetGetElv() {
+       return null;
+    }
+
+    GyáriTesztRobot(GyáriTesztRobot robot) {
+        
+    }
+    
+}
