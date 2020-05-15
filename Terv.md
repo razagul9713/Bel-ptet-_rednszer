@@ -26,9 +26,9 @@ Majd különféle robot csoportokat hozok létre, ami a különböző területek
 * díszítő
 3. Viselkedési minta
 * Állapot
-4. GOF1, GOF2, ISP, SRP
+4. GOF1, GOF2, OBs, SRP
 
-Tervezési alapelvek közül az OOP-t és azon belül a GOF1, GOF2 ISP és SRP elveket használom. Tervezési mintákon belül létrehozási tervezési mintát is használok, és azon belül a prototípus illetve gyártmetódust, a szerkezeti tervezési mintán belül a díszítőt használom és a viselkedési mintán belül az állapot mintát használom. 
+Tervezési alapelvek közül az OOP-t és azon belül a GOF1, GOF2 OBs és SRP elveket használom. Tervezési mintákon belül létrehozási tervezési mintát is használok, és azon belül a prototípus illetve gyártmetódust, a szerkezeti tervezési mintán belül a díszítőt használom és a viselkedési mintán belül az állapot mintát használom. 
   
 
 
